@@ -93,6 +93,7 @@ img {
 
 .header-address {
     font-style: normal;
+    margin-left: 332px;
 }
 .header-address-list {
     display: flex;
