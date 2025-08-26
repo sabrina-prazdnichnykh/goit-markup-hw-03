@@ -1,5 +1,7 @@
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 /* common */
@@ -27,13 +29,22 @@ h2 {
     text-align: center;
     text-transform: capitalize;
     margin: 0;
-    margin-bottom: 72px;
 }
 
+img {
+    display: block;
+}
+
+.container {
+    width: 1158px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
 /* header */
 
 .header-nav-address {
     display: flex;
+    border-bottom: 1px solid #e7e9fc;
 }
 
 .logo-header  {
@@ -44,9 +55,7 @@ h2 {
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color:#4D5AE5;
-    margin-top: 24px;
-    margin-bottom: 24px;
-    margin-left: 156px;
+    margin-right: 76px
 }
 
 .logo-header-black {
@@ -55,12 +64,12 @@ h2 {
 
 .header-nav {
     display: flex;
+    align-items: center;
 }
 
 .header-nav-list{
     display: flex;
     gap: 40px;
-    margin-right: 332px;
 }
 
 .header-nav-link{
@@ -69,6 +78,7 @@ h2 {
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
+    padding: 24px 0 24px
 }
 
 .header-nav-link:hover, .header-nav-link:focus {
@@ -97,31 +107,32 @@ h2 {
 /* hero */
 
 .hero-section {
-    background: #2E2F42;
-    width: 1440px;
-    height: 600px;
+    background-color: #2E2F42;
+    margin-top: 24px;
+    padding: 188px 0 188px
 }
 
-.hero-title {
+.hero-section-title {
     color: #FFFFFF;
     font-weight: 700;
     font-size: 56px;
     line-height: 1.07;
     letter-spacing: 0.02em;
     text-align: center;
-    width: 496px;
+    max-width: 496px;
+    margin-bottom: 48px;
     margin: 0 auto;
     margin-bottom: 48px;
-    padding-top: 188px;
 }
 
-.hero-button {
+.hero-section-button {
     color: #FFFFFF;
     background: #4D5AE5;
     border-radius: 4px;
     padding: 16px 32px;
-    width: 169px;
+    min-width: 169px;
     height: 56px;
+    border: none;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
@@ -137,6 +148,11 @@ h2 {
 }
 
 /* benefits */
+
+.benefits-section {
+    padding: 120px 0 120px;
+
+}
 
 .benefits-title {
     position: absolute;
@@ -156,13 +172,11 @@ h2 {
     justify-content: center;
     display: flex;
     gap: 24px;
-    padding-top: 120px;
-    padding-bottom: 120px;
+    
 }
 
 .benefits-list-item {
-    width: 264px;
-    height: 104px;
+    flex-basis: calc((100% - 3 * 24px) / 4)
 }
 
 .benefits-list-header {
@@ -185,23 +199,30 @@ h2 {
 
 .our-team-title {
     line-height: 1.11;
-    padding-top: 120px;
+    margin-bottom: 72px;
 }
 
 
-.our-team-background {
+.our-team-section {
     background-color: #F4F4Fd;
+    padding: 120px 0 120px
 }
 
 .team-list{
     justify-content: center;
     display: flex;
     gap: 24px;
-    padding-bottom: 120px;
 }
 
 .team-list-item {
-    background-color: #FFFFFF
+    /* background-color: #FFFFFF */
+    width: calc((100% - 72px) / 4);
+    border-radius: 0px 0px 4px 4px;
+}
+
+.team-list-elements {
+    padding: 32px 0;
+
 }
 
 .team-member-name {
@@ -210,9 +231,8 @@ h2 {
     line-height: 1.2;
     letter-spacing: 0.02em;
     color: #2E2F42; 
-    padding-top: 32px;
-    padding-bottom: 8px;
-    
+    text-align: center;
+    margin-bottom: 8px
 }
 
 .team-member-position {
@@ -221,7 +241,7 @@ h2 {
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #434455;
-    padding-bottom: 32px;
+    text-align: center;
 }
 
 .team-member-name, .team-member-position {
@@ -232,21 +252,31 @@ h2 {
 
 /* our portfolio */
 
+.portfolio-section {
+    padding: 120px 0 120px 0 ;
+}
+
 .portfolio-title {
     line-height: 1.11;
     color: #2e2f42;
-    padding-top: 120px;
+    margin-bottom: 72px;
 }
 .portfolio-list {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 24px;
+    column-gap: 24px;
+    row-gap: 48px;
     justify-content: center;
-    padding-bottom: 120px;
 }
 
 .portfolio-list-item {}
+
+.portfolio-list-elements {
+    padding: 32px 16px;
+    border: 1px solid #e7e9fc;
+    border-top: none;
+}
 
 .portfolio-list-header {
     color: #2E2F42;
@@ -255,8 +285,6 @@ h2 {
     line-height: 1.2;
     letter-spacing: 0.02em;
     margin-bottom: 8px;
-    padding-top: 32px;
-    padding-left: 16px;
 }
 
 .portfolio-list-text {
@@ -264,14 +292,13 @@ h2 {
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
-    padding-bottom: 32px;
-    padding-left: 16px;
 }
 
 /* footer */
 
 .footer {
-    background:#2E2F42;
+    background-color:#2E2F42;
+    padding: 100px 0 100px
 }
 
 .logo-footer {
@@ -282,9 +309,8 @@ h2 {
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: #4D5AE5;
-    margin-bottom: 24px;
-    margin-left: 156px;
-    padding-top: 100px;
+    display: inline-block;
+    margin-bottom: 16px;
 }
 
 .logo-footer-white {
@@ -297,8 +323,5 @@ h2 {
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #F4F4FD;
-    width: 264px;
-    margin-top: 16px;
-    margin-left: 156px;
-    padding-bottom: 100px;
+    max-width: 264px;
 }
